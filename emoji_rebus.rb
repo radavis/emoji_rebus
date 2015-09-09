@@ -1,6 +1,5 @@
 require "nokogiri"
 require "open-uri"
-require "pry"
 
 class EmojiRebus
   SOURCE_URL = "http://www.emoji-cheat-sheet.com/"
