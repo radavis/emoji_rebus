@@ -12,6 +12,10 @@ class EmojiRebus
     @emojis = all_emojis.sample(@quantity)
   end
 
+  def to_s
+    emojis.join(' ')
+  end
+
   private
 
   def source
@@ -27,10 +31,6 @@ class EmojiRebus
 
   def all_emojis
     source.css('ul.emojis div').map(&:text).map { |i| i.gsub(/\s+/, '') }
-  end
-
-  def to_s
-    emojis.join(' ')
   end
 end
 
